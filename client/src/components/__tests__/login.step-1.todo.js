@@ -26,10 +26,10 @@ test('calls onSubmit with the username and password when submitted', () => {
   // 🐨 fill in the field values
   //
 
-  const inputs = container.querySelectorAll('input')
   const form = container.querySelector('form')
-  inputs[0].value = fakeCredentials.username
-  inputs[1].value = fakeCredentials.password
+  const {username, password} = form.elements
+  username.value = fakeCredentials.username
+  password.value = fakeCredentials.password
 
   // Act
   // 🐨 submit the form:
